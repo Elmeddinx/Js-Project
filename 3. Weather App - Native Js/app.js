@@ -17,21 +17,21 @@ window.addEventListener('load', () => {
         ".degree-section span"
     )
 
-    // https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=7dddf4025a8270bb4f183eda932607e1   ---- OPENWEATHERMAP API
-    // https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=7dddf4025a8270bb4f183eda932607e1
-    //https://api.openweathermap.org/data/2.5/weather?lat=39.200912599999995&lon=45.408226899999995&appid=7dddf4025a8270bb4f183eda932607e1
-    // https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long} --- DARKSKY API
+    // https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=   ---- OPENWEATHERMAP API
+    // https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=
+    // https://api.openweathermap.org/data/2.5/weather?lat=39.200912599999995&lon=45.408226899999995&appid=
+    // https://api.darksky.net/forecast//${lat},${long} --- DARKSKY API
 
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
-            const key = '7dddf4025a8270bb4f183eda932607e1';
+            const key = '';
             const KELVIN = 273;
-            const proxy = 'https://cors-anywhere.herokuapp.com/'
+            // const proxy = 'https://cors-anywhere.herokuapp.com/'
             const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
-            // const api = `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}`;
+            // const api = `${proxy}https://api.darksky.net/forecast//${lat},${long}`;
             console.log(api);
             
             fetch(api)
