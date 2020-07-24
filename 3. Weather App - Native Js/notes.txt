@@ -1,0 +1,32 @@
+window.addEventListener('load', () => {
+    let long;
+    let lat;
+
+
+    // https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=7dddf4025a8270bb4f183eda932607e1   ---- OPENWEATHERMAP API
+    // api.openweathermap.org/data/2.5/weather?lat={${lat}}&lon={${long}}&appid={7dddf4025a8270bb4f183eda932607e1}
+    // https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}
+
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            long = position.coords.longitude;
+            lat = position.coords.latitude;
+            const api = `api.openweathermap.org/data/2.5/weather?lat={${lat}}&lon={${long}}&appid={7dddf4025a8270bb4f183eda932607e1}`;
+            console.log(api);
+
+
+            fetch(api)
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+        });
+
+
+    } else {
+
+    }
+});

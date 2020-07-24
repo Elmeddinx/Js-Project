@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.col-3 {
+    width: 20%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-box {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #3d3d3d;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.img-box img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+}
+.col-9 {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+h1 {
+    font-size: 80px;
+}
+h5 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.social {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.social a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.social a:hover {
+    background-color: #000000;
+    transition: all 0.4s;
+}
+.social a .fab {
+    font-size: 20px;
+}
+@media only screen and (max-width: 768px){
+    
+    .col-3 {
+        display: none;
+    }
+    .col-9 {
+        width: 80%;
+        padding-left: 0;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    .social {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+}

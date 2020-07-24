@@ -1,0 +1,13 @@
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@800&display=swap" rel="stylesheet">
+
+
+    Roboto
+    Open Sans
+    Lato
+    Montserrat
+    Oswald
+    Noto Sans
+    Ubuntu
+    Lora
+    Saira Extra Condensed
+    Noto Serif
